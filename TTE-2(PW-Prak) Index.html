@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <title>TTE2 - Pemrograman Web (Prak)</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: url('images1.jpg') no-repeat center center fixed;
+      background-size: cover;
+      margin: 0;
+      padding: 0;
+      color: #333;
+    }
+
+    .header-kuliah {
+      background-color: rgba(220, 238, 251, 0.9);
+      padding: 15px 30px;
+      border-bottom: 2px solid #61a5c2;
+      text-align: center;
+      font-style: italic;
+      font-weight: bold;
+    }
+
+    nav {
+      background-color: rgba(165, 216, 255, 0.9);
+      padding: 15px;
+      text-align: center;
+    }
+
+    nav button {
+      margin: 0 10px;
+      padding: 10px 20px;
+      background-color: #4dabf7;
+      color: #fff;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      font-weight: bold;
+    }
+
+    .container {
+      display: none;
+      background-color: rgba(255, 255, 255, 0.9);
+      margin: 30px auto;
+      max-width: 900px;
+      padding: 30px;
+      border-radius: 12px;
+      box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+      position: relative;
+    }
+
+    .container.active {
+      display: block;
+    }
+
+    h1 {
+      color: #1c7ed6;
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    .subheading {
+      text-align: center;
+      color: #495057;
+      margin-bottom: 10px;
+      font-size: 1.1em;
+    }
+
+    .highlight {
+      background-color: rgba(227, 250, 252, 0.9);
+      border-left: 6px solid #15aabf;
+      padding: 15px;
+      border-radius: 8px;
+      margin-bottom: 20px;
+    }
+
+    .info {
+      background-color: rgba(219, 228, 255, 0.9);
+      border-left: 6px solid #5c7cfa;
+      padding: 15px;
+      border-radius: 8px;
+      margin-bottom: 20px;
+    }
+
+    .tutorial {
+      background-color: rgba(231, 245, 255, 0.9);
+      border-left: 6px solid #339af0;
+      padding: 15px;
+      border-radius: 8px;
+    }
+
+    .footer {
+      margin-top: 40px;
+      text-align: center;
+      font-size: 0.9em;
+      color: #555;
+    }
+
+    iframe, img {
+      display: block;
+      margin: 20px auto;
+      max-width: 100%;
+      border-radius: 10px;
+    }
+
+    p {
+      text-align: justify;
+      line-height: 1.6;
+    }
+
+    .side-link {
+      position: absolute;
+      left: -270px;
+      top: 30px;
+      width: 240px;
+      background: rgba(243, 240, 255, 0.95);
+      border-left: 4px solid #9d4edd;
+      padding: 15px;
+      font-size: 0.9em;
+      box-shadow: 2px 2px 10px rgba(0,0,0,0.1);
+      border-radius: 10px;
+    }
+
+    .side-link a {
+      color: #5f3dc4;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    .side-link a:hover {
+      text-decoration: underline;
+    }
+
+    .blue-text {
+      color: #1971c2;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="header-kuliah">
+    Dibuat untuk keperluan tugas kuliah TTE2, untuk mata kuliah Praktikum Pemrograman Web materi CSS.<br>
+    Nama: Yuli Megawati, NIM: 231110015
+  </div>
+
+  <nav>
+    <button onclick="showPage('page1')">📢 Pengumuman</button>
+    <button onclick="showPage('page2')">📖 Pengantar Pelatihan</button>
+    <button onclick="showPage('page3')">📎 Disclaimer</button>
+  </nav>
+
+  <!-- Halaman 1 -->
+  <div class="container active" id="page1">
+    <h1>📢 Launching Teknologi Analisis Suara</h1>
+    <div class="subheading">Inovasi untuk CS & CRM</div>
+
+    <div class="highlight">
+      Teknologi baru hadir dari tim Support untuk mendukung layanan pelanggan lebih empatik dan adaptif. Dengan fitur analisis suara real-time, sistem akan membantu mengidentifikasi tekanan emosi dari pelanggan maupun CS saat berkomunikasi.
+    </div>
+
+    <div class="info">
+      🎯 Manfaat teknologi:
+      <ul>
+        <li>🔊 Mendeteksi emosi dari suara pelanggan secara otomatis</li>
+        <li>📣 Memberi peringatan saat CS mulai terpancing emosi</li>
+        <li>📈 Meningkatkan akurasi dan kualitas komunikasi digital</li>
+      </ul>
+    </div>
+
+    <iframe 
+      width="100%" 
+      height="315" 
+      src="https://www.youtube.com/embed/qlevfyYfdkc" 
+      title="YouTube video player" 
+      frameborder="0" 
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+      allowfullscreen>
+    </iframe>
+
+    <div class="tutorial">
+      🧠 Training akan dimulai minggu ini dan dipandu langsung oleh tim Data Analyst dan Tim Tech & Development. Harap semua peserta hadir dan siap mencoba teknologi terbaru ini!
+    </div>
+  </div>
+
+  <!-- Halaman 2 -->
+  <div class="container" id="page2">
+    <h1>📖 Storytelling: Teknologi & Digital Marketing</h1>
+
+    <p class="blue-text">
+      Teknologi bukan hanya alat bantu, tapi partner pintar dalam menyentuh hati pelanggan. Analisis suara menjadi jembatan emosional dalam dunia digital marketing, memungkinkan brand mengetahui suasana hati pelanggan tanpa mereka harus mengucapkannya.
+    </p>
+
+    <p class="blue-text">
+      Mulai dari mendeteksi frustasi hingga menganalisis rasa puas, data suara kini menjadi bahan strategi. Ini bukan tentang menggantikan manusia, tapi memperkuat sentuhan personal dalam komunikasi digital.
+    </p>
+
+    <img src="images2.jpg" alt="Ilustrasi voice analytics di marketing">
+
+    <div class="tutorial">
+      📖 Ingin tahu lebih lanjut bagaimana teknologi ini bekerja?<br>
+      <a href="https://medium.com/@megawatiyuli9/membaca-emosi-dari-suara-tugas-sederhana-dan-sudut-pandang-baru-melihat-customer-service-16124075ed52" target="_blank">
+        Baca selengkapnya di Medium: Membaca Emosi dari Suara 🔗
+      </a>
+    </div>
+  </div>
+
+  <!-- Halaman 3 -->
+  <div class="container" id="page3">
+    <div class="side-link">
+      📄 Dokumentasi Tugas Web:<br><br>
+      <strong>Tugas TTE1:</strong><br>
+      <a href="https://ega-yuli.github.io/TTE1-PW-Prak-YMW-32D/TTE-1(PW-Prak)index.html" target="_blank">
+        Lihat Halaman
+      </a><br>
+      Dikumpulkan: Jumat, 11 April 2025, 8.46 PM
+    </div>
+
+    <h1>📎 Disclaimer & Pernyataan Tugas</h1>
+    <p>
+      Dengan ini saya menyatakan bahwa saya telah menyelesaikan Tugas Praktikum Pemrograman Web untuk mata kuliah TTE-2 dengan sebaik-baiknya.<br><br>
+      Segala kode HTML, CSS, dan elemen tambahan dalam tugas ini merupakan hasil kerja saya sendiri sebagai bagian dari proses pembelajaran.
+    </p>
+
+    <iframe src="TTE2 Pemrograman WEB (Prak).pdf" width="100%" height="500px"></iframe>
+
+    <p class="footer">
+      Terima kasih kepada dosen pengampu atas bimbingannya. Semoga tugas ini dapat dinilai dengan hasil yang maksimal.
+    </p>
+  </div>
+
+  <script>
+    function showPage(id) {
+      const pages = document.querySelectorAll('.container');
+      pages.forEach(page => page.classList.remove('active'));
+      document.getElementById(id).classList.add('active');
+    }
+  </script>
+
+</body>
+</html>
